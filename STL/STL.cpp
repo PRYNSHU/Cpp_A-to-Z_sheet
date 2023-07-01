@@ -46,18 +46,105 @@ void priorityque(){
     cout << pq.top() << endl;
 
 }
-int main(){
-    //about pairs
-    // pairs();
-    // iterators();
+
+void vectors(){
 
     vector<int> v = {10, 20, 30, 50, 80};
 
-    v.insert(v.begin() +1, 11); //take address as an input
-    cout << v[1] << endl;
+        v.insert(v.begin() +1, 11); //take address as an input
+        cout << v[0] << " " << v[1] << endl;
 
-    v.erase(v.begin() , v.end()); //from and to
-    cout << v.empty() << endl;
+        v.erase(v.begin() , v.end()); //from and to
+        cout << v.empty() << endl;
+}
+
+void sets(){
+
+    //store in sorted and unique way
+    set<int> st = {2,2,5,1,6,6,8};
+    st.insert(3);
+    auto it = st.find(2);
+    cout << *(it) << endl;
+    // cout << st.find(2) << " " << st[0] << endl;
+    cout << st.size() << endl;
+    st.erase(2);
+        cout << st.size() << endl;
+
+    cout << st.count(5)  << " " << st.count(9) << endl;
+
+}
+
+void multisets(){
+
+    //stored in sorted ,but not unique
+    multiset<int> ms;
+
+    ms.insert(3);
+    ms.insert(3);
+    ms.insert(1);
+    ms.insert(5);
+    ms.insert(2);
+    ms.insert(3);
+
+    ms.find(2);
+    cout << "size " << ms.size() << endl;
+    // ms.erase(3); //erase all 3
+    ms.erase(ms.find(3)); //erase only 3
+    cout << "size " << ms.size() << endl;
+
+}
+
+void unorderedsets(){
+
+    //stored in unique and in random order
+    // T.C = O(1)
+    unordered_set<int> us;
+    
+    us.insert(8);us.insert(2);
+    us.insert(3);
+    us.insert(5);
+    cout << *(us.begin()) << endl;
+    
+    //all fn works
+
+}
+
+void maps(){
+
+    //stored in key and value pairs
+    map<int ,int> mp;
+    mp[1] = 9;
+    mp.insert({2,5});        
+    mp.insert({3,8});
+
+    for(auto it : mp){
+        cout << it.first << " " << it.second << endl;
+    }
+    cout << mp[3] << endl;
+
+    auto it = mp.find(3);
+
+}
+
+void unorderedmaps(){
+    //store in random and key are always unique
+    //T.C = O(1)
+    unordered_map<int , int> mpp;
+
+}
+
+int main(){
+
+    // //about pairs
+    // pairs();
+    // iterators();
+
+    // vectors();
+    // sets();
+    // multisets();
+    unorderedsets();
+
+    // maps();
 
     // priorityque();
 
