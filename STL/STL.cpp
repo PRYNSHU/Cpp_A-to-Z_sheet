@@ -114,15 +114,15 @@ void maps(){
     //stored in key and value pairs
     map<int ,int> mp;
     mp[1] = 9;
-    mp.insert({2,5});        
+    mp.insert({4,5});        
     mp.insert({3,8});
+    mp.insert({2,3});
+    mp.insert({5,8});
 
-    for(auto it : mp){
-        cout << it.first << " " << it.second << endl;
+    for(auto i : mp){
+        cout << i.first << "->" << i.second << endl;
     }
-    cout << mp[3] << endl;
-
-    auto it = mp.find(3);
+    cout << mp[1] << endl;
 
 }
 
@@ -142,9 +142,9 @@ int main(){
     // vectors();
     // sets();
     // multisets();
-    unorderedsets();
+    // unorderedsets();
 
-    // maps();
+    maps();
 
     // priorityque();
 
