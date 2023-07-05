@@ -49,13 +49,20 @@ void priorityque(){
 
 void vectors(){
 
-    vector<int> v = {10, 20, 30, 50, 80};
+    //dynamic array 
+    // int v2[1000] = {0}; //initializing all element with zero
 
-        v.insert(v.begin() +1, 11); //take address as an input
-        cout << v[0] << " " << v[1] << endl;
+    vector<int> v = {10, 20, 30, 50, 80};
+        v.push_back(90);
+        cout << v.back() << endl; //return last ele
+        // v.clear(); //clear all ele
+        
+        //take address as an input , insert between the ele
+        v.insert(v.begin() +1 , 11);
+        cout << v[0] << " & at 1 index " << v[1] << endl;
 
         v.erase(v.begin() , v.end()); //from and to
-        cout << v.empty() << endl;
+        cout << v.empty() << endl; //check empty or not
 }
 
 void sets(){
@@ -139,12 +146,12 @@ int main(){
     // pairs();
     // iterators();
 
-    // vectors();
+    vectors();
     // sets();
     // multisets();
     // unorderedsets();
 
-    maps();
+    // maps();
 
     // priorityque();
 

@@ -18,18 +18,15 @@ void tobinary(){
 
     cout << ans;
 }
+
 int main(){
     
-tobinary();
+    tobinary();
+    int n =44;
+    n = n >> 3;
+    cout << n << endl;
 
-int n =44;
-n = n >> 3;
-cout << n << endl;
-
-n = n << 3;
-cout << n << endl;
-
-
-
+    n = n << 3;
+    cout << n << endl;
 
 }
