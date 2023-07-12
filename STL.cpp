@@ -131,6 +131,19 @@ void maps(){
     }
     cout << mp[1] << endl;
 
+    // The function returns an iterator or a constant iterator 
+    // which refers to the position where the key is present in the map.
+    // If the key is not present in the map container, 
+    // it returns an iterator or a constant iterator which refers to map.end(). 
+
+    if(mp.find(3) != mp.end())
+        cout << "key 3 is present" << endl;
+    else
+        cout << "not present" << endl;
+        
+    if(mp.find(8) == mp.end())
+        cout << "key 8 is not present , iterator return end()";
+
 }
 
 void unorderedmaps(){
@@ -146,12 +159,12 @@ int main(){
     // pairs();
     // iterators();
 
-    vectors();
+    // vectors();
     // sets();
     // multisets();
     // unorderedsets();
 
-    // maps();
+    maps();
 
     // priorityque();
 

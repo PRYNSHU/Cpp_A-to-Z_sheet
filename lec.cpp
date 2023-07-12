@@ -11,7 +11,7 @@ void tobinary(){
         rem = n&1;
         ans = rem * i + ans;
         i = i*10;
-        //both r same
+        //both are same
         // n = n>>1;
         n = n/2;
     }
@@ -20,13 +20,6 @@ void tobinary(){
 }
 
 int main(){
-    
+
     tobinary();
-    int n =44;
-    n = n >> 3;
-    cout << n << endl;
-
-    n = n << 3;
-    cout << n << endl;
-
 }
