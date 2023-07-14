@@ -1,6 +1,74 @@
 #include <bits/stdc++.h>
 using namespace std;
 
+
+void sets(){
+
+    //store in sorted and unique way
+    // T.C -> logN
+    set<int> st = {2,2,5,1,6,12,10};
+    st.insert(3);
+
+    if(st.find(3) != st.end())
+        cout << "It is present" << endl;
+
+    auto it = st.find(2);
+    cout << *(it) << endl;
+
+    cout << st.size() << endl;
+    st.erase(2);
+    cout << st.size() << endl;
+
+    //check ele present or not
+    cout << st.count(5) << " " << st.count(9) << endl;
+
+    //print
+    for(auto it = st.begin();it !=st.end();it++){
+        cout << *it << " ";
+    }
+    cout << "\n";
+    //set empty or not
+    cout << st.empty() << endl;
+
+}
+
+void maps(){
+
+    //stored in key and value pairs
+    map<int ,int> mp;
+    mp[1] = 9;
+    mp.insert({4,5});        
+    mp.insert({3,8});
+    mp.insert({2,3});
+    mp.insert({5,8});
+
+    for(auto it : mp){
+        cout << it.first << "->" << it.second << endl;
+    }
+    cout << mp[1] << endl;
+
+    // The function returns an iterator or a constant iterator 
+    // which refers to the position where the key is present in the map.
+    // If the key is not present in the map container, 
+    // it returns an iterator or a constant iterator which refers to map.end(). 
+
+    if(mp.find(3) != mp.end())
+        cout << "key 3 is present" << endl;
+    else
+        cout << "not present" << endl;
+        
+    if(mp.find(8) == mp.end())
+        cout << "key 8 is not present , iterator return end()";
+
+}
+
+void unorderedmaps(){
+    //store in random and key are always unique
+    //T.C = O(1)
+    unordered_map<int , int> mpp;
+
+}
+
 void pairs(){
     //part of utility library
     pair<int , int> p = {3,4};
@@ -65,22 +133,6 @@ void vectors(){
         cout << v.empty() << endl; //check empty or not
 }
 
-void sets(){
-
-    //store in sorted and unique way
-    set<int> st = {2,2,5,1,6,6,8};
-    st.insert(3);
-    auto it = st.find(2);
-    cout << *(it) << endl;
-    // cout << st.find(2) << " " << st[0] << endl;
-    cout << st.size() << endl;
-    st.erase(2);
-        cout << st.size() << endl;
-
-    cout << st.count(5)  << " " << st.count(9) << endl;
-
-}
-
 void multisets(){
 
     //stored in sorted ,but not unique
@@ -106,65 +158,36 @@ void unorderedsets(){
     //stored in unique and in random order
     // T.C = O(1)
     unordered_set<int> us;
-    
-    us.insert(8);us.insert(2);
-    us.insert(3);
-    us.insert(5);
-    cout << *(us.begin()) << endl;
-    
-    //all fn works
-
 }
 
-void maps(){
-
-    //stored in key and value pairs
-    map<int ,int> mp;
-    mp[1] = 9;
-    mp.insert({4,5});        
-    mp.insert({3,8});
-    mp.insert({2,3});
-    mp.insert({5,8});
-
-    for(auto i : mp){
-        cout << i.first << "->" << i.second << endl;
+void max_min(){
+    vector<int>v {4,2,5,9,1};
+    cout<<"The elements in the vector are: ";
+    for(int i=0;i<v.size();i++)
+    {
+        cout<<v[i]<<" ";
     }
-    cout << mp[1] << endl;
-
-    // The function returns an iterator or a constant iterator 
-    // which refers to the position where the key is present in the map.
-    // If the key is not present in the map container, 
-    // it returns an iterator or a constant iterator which refers to map.end(). 
-
-    if(mp.find(3) != mp.end())
-        cout << "key 3 is present" << endl;
-    else
-        cout << "not present" << endl;
-        
-    if(mp.find(8) == mp.end())
-        cout << "key 8 is not present , iterator return end()";
-
+    cout<<endl;
+    
+    cout<<"The max element: "<<*max_element(v.begin(),v.end());
+    cout << endl;
+    cout<<"The mini element: "<<*min_element(v.begin(),v.end());
 }
 
-void unorderedmaps(){
-    //store in random and key are always unique
-    //T.C = O(1)
-    unordered_map<int , int> mpp;
-
-}
 
 int main(){
+    // sets();
 
     // //about pairs
     // pairs();
     // iterators();
 
     // vectors();
-    // sets();
     // multisets();
     // unorderedsets();
 
-    maps();
+    // maps();
+    max_min();
 
     // priorityque();
 
