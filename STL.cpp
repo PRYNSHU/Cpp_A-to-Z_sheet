@@ -34,7 +34,7 @@ void sets(){
 
 void maps(){
 
-    //stored in key and value pairs
+    //stored in key(in order) and value pairs
     map<int ,int> mp;
     mp[1] = 9;
     mp.insert({4,5});        
@@ -186,8 +186,8 @@ int main(){
     // multisets();
     // unorderedsets();
 
-    // maps();
-    max_min();
+    maps();
+    // max_min();
 
     // priorityque();
 

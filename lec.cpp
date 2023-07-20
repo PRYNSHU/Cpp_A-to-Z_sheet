@@ -21,5 +21,10 @@ void tobinary(){
 
 int main(){
 
-    tobinary();
+    // tobinary();
+    int a = 5;
+    int b = -5;
+    cout << (abs(a) + abs(b));
+
+
 }
