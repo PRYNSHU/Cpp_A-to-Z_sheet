@@ -3,17 +3,20 @@ using namespace std;
 
 void count(int n){
     //base cond
+    //when fun returns it doesn't process further lines, 
+    // just back to old count/fun
     if(n==0)
         return; //void fun
+        //when base cond true, below part of that fun doesn't execute.
 
     //processing (optional component)
     cout << n << endl;
 
     //recurcive relation
-    //(as rec. rel. is below from processing ,it is called TAIL recursion)
     count(n-1);
     cout << n << endl;
-    //rec rel always returns to main whether it is void or not 
+    //every fun is in stack , when one is completed(reaches last line)
+    //it get back to old fun & eventually to the main fun.
 }
 
 
@@ -23,7 +26,7 @@ int fact(int n){
         return 1; // In base condition return is mandatory
 
     //recursive relation
-    int ans = n * fact(n-1);
+    int ans = n * fact(n-1); 
     cout << n << "-" << ans << endl;
     return ans;
 }
@@ -34,7 +37,8 @@ int power(int n){
         return 1;
 
     //recursive relation
-    return 2 * power(n-1);
+    int p = 2 * power(n-1);
+    return p;
 }
 
 int sumarr(int arr[], int n){
@@ -50,18 +54,23 @@ int sumarr(int arr[], int n){
 }
 
 int main(){
-    
+
     int n = 5;
     // int ans = fact(n);
     // cout << ans << endl;
+    // cout << "===" << endl;
     // count(n);
     
     // int ans2 = power(n);
     // cout << ans2 << endl;
 
-    int arr[10] = {1,2,3,4,5};
+    // int arr[10] = {1,2,3,4,5};
+    // cout << "===" << endl;
+    // cout << "sum is " << endl;
+    // int ans = sumarr(arr , n);
+    // cout << ans << endl;
 
-    cout << "sum is " << endl;
-    int ans = sumarr(arr , n);
-    cout << ans << endl;
+
+    
 }
+
