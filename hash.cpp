@@ -2,6 +2,7 @@
 using namespace std;
 
 void hashing(){
+    
 
     //array hashing
     int n =10;
