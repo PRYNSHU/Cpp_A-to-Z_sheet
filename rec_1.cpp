@@ -4,7 +4,7 @@ using namespace std;
 void count(int n){
     //base cond
     //when fun returns it doesn't process further lines, 
-    // just back to old count/fun
+    // just back to previous count/fun
     if(n==0)
         return; //void fun
         //when base cond true, below part of that fun doesn't execute.
@@ -16,7 +16,7 @@ void count(int n){
     count(n-1);
     cout << n << endl;
     //every fun is in stack , when one is completed(reaches last line)
-    //it get back to old fun & eventually to the main fun.
+    //it get back to previous fun & eventually to the main fun.
 }
 
 
@@ -28,7 +28,9 @@ int fact(int n){
     //recursive relation
     int ans = n * fact(n-1); 
     cout << n << "-" << ans << endl;
-    return ans;
+    
+    //must return for non void
+    return ans; 
 }
 
 int power(int n){
@@ -56,8 +58,8 @@ int sumarr(int arr[], int n){
 int main(){
 
     int n = 5;
-    // int ans = fact(n);
-    // cout << ans << endl;
+    int ans = fact(n);
+    cout << ans << endl;
     // cout << "===" << endl;
     // count(n);
     
@@ -70,7 +72,5 @@ int main(){
     // int ans = sumarr(arr , n);
     // cout << ans << endl;
 
-
-    
 }
 
