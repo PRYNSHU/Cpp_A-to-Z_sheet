@@ -48,29 +48,33 @@ int sumarr(int arr[], int n){
     if(n==1){
         return arr[0];
     }
-    cout << arr[0] << " " << n << endl;
-
+    // cout << arr[0] << " " << n << endl;
     //recursive relation
-    int sum = arr[0] + sumarr(arr +1, n-1);
-    return sum;
+    int sum1 = arr[0] + sumarr(arr +1, n-1);
+    // int sum2 = 100 + sumarr(arr +1, n-1);
+
+    // return sum1;
+    // return sum2;
+    // return sum1 + sum2;
+    return 10 +sum1;
 }
 
 int main(){
 
     int n = 5;
-    int ans = fact(n);
-    cout << ans << endl;
+    // int ans = fact(n);
+    // cout << ans << endl;
     // cout << "===" << endl;
     // count(n);
     
     // int ans2 = power(n);
     // cout << ans2 << endl;
 
-    // int arr[10] = {1,2,3,4,5};
+    int arr[10] = {1,2,3,4,5};
     // cout << "===" << endl;
-    // cout << "sum is " << endl;
-    // int ans = sumarr(arr , n);
-    // cout << ans << endl;
+    cout << "sum is " << endl;
+    int ans = sumarr(arr , n);
+    cout << ans << endl;
 
 }
 
